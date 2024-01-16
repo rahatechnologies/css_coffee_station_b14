@@ -1,0 +1,254 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&family=Kaushan+Script&family=Poppins&display=swap');
+
+/* h1{
+     font-family: "Grand Hotel";
+} */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global css variable */
+
+:root{
+    --clr-primary: #d6700b;
+    --clr-primary-light: #beed8c;
+    --clr-grey-1: #102a42;
+    --clr-grey-5: #617d98;
+    --clr-grey-10: #f1f5f8;
+    --clr-white: #fff;
+    --ff-primary: "Catamaran", sans-serif;
+    --ff-secondary: "Grand Hotel", cursive;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+}
+body{
+    color: var(--clr-grey-1);
+    background-color: var(--clr-white);
+    font-family: var(--ff-primary);
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1, h2, h3, h4{
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: .875rem;
+}
+
+@media screen and (min-width:800px) {
+    h1{
+        font-size: 4rem;
+        
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    body{
+        font-size: 1rem;
+    }
+    h1, h2, h3, h4{
+        line-height: 1;
+      }
+}
+
+.btn{
+    color: var(--clr-white);
+    background-color: var(--clr-primary);
+    text-transform: uppercase;
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    letter-spacing: var(--spacing);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: var(--clr-primary-light);
+    color: var(--clr-primary);
+
+
+}
+
+/* header */
+header{
+    background-image:linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),  url(../images/main-bcg.jpeg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* display: flex;
+    justify-content: center; */
+    position: relative;
+    overflow-x: hidden;
+    
+    
+    
+}
+.banner{
+    /* display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* translate: -50% -50%; */
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.banner h2{
+    color: var(--clr-primary);
+    font-family: var(--ff-secondary);
+
+   
+    
+}
+.banner h1{
+    color: var(--clr-white);
+    text-transform: uppercase;
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+     /* animation */
+}
+.banner_btn {
+    padding: 1rem 1.75rem;
+    font-size: 1.25rem;
+    outline: .2rem solid var(--clr-primary);
+    outline-offset: 0.25rem;
+    
+}
+.content_divider {
+    height: .5rem;
+    background: linear-gradient(to left,var(--clr-primary),#e9b949,var(--clr-primary));
+}
+ 
+
+
+/* --skills----- */
+
+.skills{
+    background: var(--clr-grey-10);
+}
+
+.skill{
+    /* float: left; */
+    text-align: center;
+    transition: var(--transition);
+    padding: 2.5rem 0;
+}
+
+
+.skill_icon{
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    display: inline-block;
+    transition: var(--transition);
+    color: var(--clr-primary);
+}
+
+.skill_title{
+    color: var(--clr-grey-1);
+}
+
+.skill_text{
+    max-width: 16rem;
+    color: var(--clr-grey-5);
+    margin: 0 auto;
+}
+
+
+.skill:hover{
+    background: var(--clr-white);
+    /* border-bottom: 3px solid var(--clr-primary); */
+    box-shadow: 0px 2px var(--clr-primary);
+}
+
+.skill:hover .skill_icon{
+    transform: translateY(-5px);
+}
+
+/* demo truncate overflow text--- */
+
+/* .elipsis_text{
+    text-overflow: ellipsis;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.read_more{
+    display: inline-block;
+    margin-top: -1px;
+    vertical-align: top;
+    color: red;
+} */
+
+/* .pera{
+    color: black;
+} */
+@media screen and (min-width: 576px){
+    .skill{    
+        float: left;
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .skill{     
+        width: 25%;
+    }
+}
+.clearfix::after, .clearfix::before{  
+    content: '';
+    clear: both;
+    display: block;
+}
+/* .clearboth{
+    clear: both;
+} */
+
+/* .section_center{
+    margin: 5rem 5rem;
+} */
